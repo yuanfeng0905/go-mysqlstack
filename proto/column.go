@@ -93,7 +93,7 @@ func UnpackColumn(payload []byte) (*querypb.Field, error) {
 	field.Flags = uint32(flags)
 
 	// Convert MySQL type
-	if field.Type, err = sqltypes.MySQLToType(int64(t), int64(field.Flags)); err != nil {
+	if field.Type, err = sqltypes.(int64(t), int64(field.Flags)); err != nil {
 		return nil, sqldb.NewSQLErrorf(sqldb.ER_MALFORMED_PACKET, "MySQLToType(%v,%v) failed: %v", t, field.Flags, err)
 	}
 

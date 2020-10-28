@@ -125,7 +125,7 @@ const (
 // If you add to this map, make sure you add a test case
 // in tabletserver/endtoend.
 var mysqlToType = map[int64]querypb.Type{
-	0:   Null,
+	0:   Decimal,
 	1:   Int8,
 	2:   Int16,
 	3:   Int32,
